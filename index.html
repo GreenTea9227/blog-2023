@@ -88,8 +88,8 @@
   <div id="viewer-1"></div>
 
   <ul>
-    <li><a href="javascript:showPage(3)">1번글</a></li>
-    <li><a href="javascript:showPage(3)">2번글</a></li>
+    <li><a href="javascript:showPage(1)">1번글</a></li>
+    <li><a href="javascript:showPage(2)">2번글</a></li>
     <li><a href="javascript:showPage(3)">3번글</a></li>
   </ul>
 
@@ -161,12 +161,18 @@
     });
 
     function showPage(pageNo) {
-      fetch(no + ".md")
-      .then(response => response.text()) //응답에서 본문만 가져오기
-      .then(text => {
-        viewer1.setMarkdown(text)
-      })
+      fetch(pageNo + ".md")
+        .then(response => response.text()) // 응답에서 본문만 취한다.
+        .then(text => {
+          viewer1.setMarkdown(text);
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        })
     }
+
 
   </script>
 
