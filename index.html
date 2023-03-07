@@ -54,40 +54,10 @@
 </head>
 
 <body>
-
-  <template id="viewer-1-template">
-    # 안녕하세요.
-    ## 반가워요.
-    - 하하
-    - 호호
-    - 히히
-
-    # 자바
-    ```java
-    // 주석입니다.
-    int a = 10;
-    int b = 20;
-    System.out.println(a + b);
-    ```
-
-    $$katex
-    x^2 + y^2 = 1
-    $$
-
-    ```html
-    <script src="경로"></script>
-    ```
-
-    $$uml
-    (First usecase)
-    (Another usecase) as (UC2)
-    usecase UC3
-    usecase (Last\nusecase) as UC4
-    $$
-  </template>
   <div id="viewer-1"></div>
 
   <ul>
+    <li><a href="javascript:showPage(4)">4번글</a></li>
     <li><a href="javascript:showPage(1)">1번글</a></li>
     <li><a href="javascript:showPage(2)">2번글</a></li>
     <li><a href="javascript:showPage(3)">3번글</a></li>
@@ -172,6 +142,8 @@
           });
         })
     }
+
+    showPage(4);
 
 
   </script>
